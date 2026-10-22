@@ -13,10 +13,9 @@ const PORT = 3004;
 app.use(express.static('public'));
 
 // Define a default route ("/")
-// app.get('/', (req, res) => {
-//     //res.send('Welcome to Poppa\'s Pizza');
-//     res.sendFile(`${import.meta.dirname}/views/home.html`);
-// });
+app.get('/', (req, res) => {
+    res.sendFile(`${import.meta.dirname}/views/home.html`);
+});
 
 // Start the server on the designated port
 app.listen(PORT, () => {
