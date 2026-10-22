@@ -9,8 +9,14 @@ const app = express();
 // for our server to listen on
 const PORT = 3004;
 
+const appointments = [];
+
 // Enable static file serving
 app.use(express.static('public'));
+
+app.use(express.urlencoded({ extended: true }));
+
+
 
 // Define a default route ("/")
 app.get('/', (req, res) => {
