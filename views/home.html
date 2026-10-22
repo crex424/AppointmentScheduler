@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Appointment Scheduler</title>
+  <link rel="stylesheet" href="styles/form.css">
 </head>
 <body>
   <form action="/confirm" method="get">
@@ -13,9 +14,11 @@
 
     <label for="fname">First Name</label>
     <input type="text" id="fname" name="fname" placeholder="Jane">
+    <span id="err-fname" class="error">First name is required</span>
 
     <label for="lname">Last Name</label>
     <input type="text" id="lname" name="lname" placeholder="Doe">
+    <span id="err-lname" class="error">Last name is required</span>
 
     <label for="date">Meeting Date</label>
     <input type="date" id="date" name="date" placeholder="mm/dd/yyyy">
