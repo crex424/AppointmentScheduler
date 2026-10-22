@@ -17,6 +17,11 @@ app.get('/', (req, res) => {
     res.sendFile(`${import.meta.dirname}/views/home.html`);
 });
 
+app.get('/confirm', (req, res) => {
+    //res.send('Welcome to Poppa\'s Pizza');
+    res.sendFile(`${import.meta.dirname}/views/confirm.html`);
+});
+
 // Start the server on the designated port
 app.listen(PORT, () => {
     console.log(`Server is running at http://localhost:${PORT}`);
