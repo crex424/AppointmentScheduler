@@ -28,6 +28,19 @@ app.get('/confirm', (req, res) => {
     res.sendFile(`${import.meta.dirname}/views/confirm.html`);
 });
 
+app.post('/submit-appointment', (req, res) => {
+  console.log(req.body);
+  
+  const appointment = req.body;
+  appointment.timestamp = new Date();
+
+  console.log(appointment);
+  
+  appointments.push(appointment);
+  console.log(appointments);
+  res.sendFile(`${import.meta.dirname}/views/confirm.html`);
+});
+
 // Start the server on the designated port
 app.listen(PORT, () => {
     console.log(`Server is running at http://localhost:${PORT}`);
