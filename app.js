@@ -24,7 +24,6 @@ app.get('/', (req, res) => {
 });
 
 app.get('/confirm', (req, res) => {
-    //res.send('Welcome to Poppa\'s Pizza');
     res.sendFile(`${import.meta.dirname}/views/confirm.html`);
 });
 
