@@ -7,7 +7,7 @@ const app = express();
 
 // Define port number
 // for our server to listen on
-const PORT = 3004;
+const PORT = 3003;
 
 const appointments = [];
 
