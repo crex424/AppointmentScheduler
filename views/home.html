@@ -8,26 +8,32 @@
   <script src="scripts/form.js" defer></script>
 </head>
 <body>
-  <form id="scheduler-form" action="/submit-appointment" method="post">
-    <h1>Appointment Scheduler</h1>
-
-    <h2>Book an Appointment</h2>
-
-    <label for="fname">First Name</label>
-    <input type="text" id="fname" name="fname" placeholder="Jane">
-    <span id="err-fname" class="error">First name is required</span>
-
-    <label for="lname">Last Name</label>
-    <input type="text" id="lname" name="lname" placeholder="Doe">
-    <span id="err-lname" class="error">Last name is required</span>
-
-    <label for="date">Meeting Date</label>
-    <input type="date" id="date" name="date" placeholder="mm/dd/yyyy">
-
-    <label for="time">Meeting Time</label>
-    <input type="time" id="time" name="time" placeholder="--:--:--">
-
-    <button type="submit">Book Appointment</button>
-  </form>
+  <div id="scheduler">
+    <header>
+      <h1>Appointment Scheduler</h1>
+    </header>
+  
+    <main>
+      <h2>Book an Appointment</h2>
+    
+      <form id="scheduler-form" action="/submit-appointment" method="post">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="fname" placeholder="Jane">
+        <span id="err-fname" class="error">First name is required</span>
+    
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lname" placeholder="Doe">
+        <span id="err-lname" class="error">Last name is required</span>
+    
+        <label for="date">Meeting Date</label>
+        <input type="date" id="date" name="date" placeholder="mm/dd/yyyy">
+    
+        <label for="time">Meeting Time</label>
+        <input type="time" id="time" name="time" placeholder="--:--:--">
+    
+        <button type="submit">Book Appointment</button>
+      </form>
+    </main>
+  </div>
 </body>
 </html>
